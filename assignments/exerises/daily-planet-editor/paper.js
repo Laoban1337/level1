@@ -24,7 +24,7 @@ function whoWins(isthereKryptonite, enemyName) {
   } else {
     return (
       "Depends on how quick Superman can get rid of the Kryptonite. " +
-      enemyname +
+      enemyName +
       " could possibly win this one."
     );
   }
@@ -42,10 +42,10 @@ for (var i = 0; i < enemies.length; i++) {
 
 function loisLaneAttractionLevel() {
   // 1 is not at all attracted, 10 is "super" attracted...
-  return Math.floor(Mat.random() * 10 + 1);
+  return Math.floor(Math.random() * 10 + 1);
 }
 
-consol.log(loisLaneAttractionLevel());
+console.log(loisLaneAttractionLevel());
 
 var clarkKent = true;
 var superman = false;

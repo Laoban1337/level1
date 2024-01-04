@@ -16,7 +16,7 @@ var enemies = [
   "General Zod",
   "Doomsday",
 ];
-console.log("test")
+
 
 function whoWins(isthereKryptonite, enemyName) {
   if (!isthereKryptonite) {

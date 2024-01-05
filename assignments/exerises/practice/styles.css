@@ -1,0 +1,41 @@
+body{
+  background-color: black;
+display: inline-block;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+h1{
+color: antiquewhite;
+font-size: 3rem;
+}
+h2{
+color: red;
+font-size: 2ren;
+
+}
+
+#favorite-things > li{
+    
+    color: gold;
+    
+}
+.least-fav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 10px;
+
+}
+
+
+#least-favorite > li{
+    color: red;
+    margin-bottom: 20px;
+}

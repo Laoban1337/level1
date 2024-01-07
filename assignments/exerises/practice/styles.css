@@ -1,10 +1,7 @@
-body{
-  background-color: black;
-display: inline-block;
-}
+
 
 .container{
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
@@ -20,22 +17,29 @@ font-size: 2ren;
 
 }
 
-#favorite-things > li{
+#rarity > li{
     
     color: gold;
     
 }
-.least-fav{
-    display: flex;
+.farm{
+    color: aquamarine;
+    display: block;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    padding-bottom: 10px;
-
+    align-content: center;
+    margin-bottom: 100px;
+    font-family: 1.5rem;
 }
 
 
-#least-favorite > li{
-    color: red;
-    margin-bottom: 20px;
+.ranger-container{
+    display: block;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 100px;
+    font-family: 1.5rem;
+}
+
+#rangers{
+    color: aliceblue;
 }

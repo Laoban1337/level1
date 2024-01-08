@@ -13,7 +13,7 @@ var button = document.getElementById("btn");
 
 document.body.style.backgroundColor = "black";
 
-button.addEventListener(click, function (e) {
+button.addEventListener(click, function () {
   alert("Button clicked");
 });
 

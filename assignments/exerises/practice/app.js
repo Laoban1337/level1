@@ -9,7 +9,13 @@ var rareText = document.querySelector(".rare");
 var uncommonText = document.querySelector(".uncommon");
 var normalText = document.querySelector(".normal");
 
+var button = document.getElementById("btn");
+
 document.body.style.backgroundColor = "black";
+
+button.addEventListener(click, function (e) {
+  alert("Button clicked");
+});
 
 legendText.style.color = "#FF004D";
 epicText.style.color = "#FAEF9B";
@@ -26,15 +32,21 @@ var powerRangers = [
   { name: "Zack Taylor", color: "Black", weapon: "Power Axe" },
   { name: "Trini Kwan", color: "Yellow", weapon: "Power Daggers" },
   { name: "Billy Cranston", color: "Blue", weapon: "Power Lance" },
-  { name: "Tommy Oliver", color: "Green/White", weapon: "Dragon Dagger/Saba" }
+  { name: "Tommy Oliver", color: "Green/White", weapon: "Dragon Dagger/Saba" },
 ];
 
 var rangersList = document.getElementById("rangers");
 
-for(var i = 0; i < powerRangers.length; i++){
+for (var i = 0; i < powerRangers.length; i++) {
   var ranger = powerRangers[i];
-  var listItem = document.createElement("li")
+  var listItem = document.createElement("li");
 
-  listItem.textContent = "Name : " + " " + ranger.name + " Suit color: " +  ranger.color  + "  weapon of choice  " + ranger.weapon;
+  listItem.textContent =
+    "Name : " +
+    ranger.name +
+    " Suit color: " +
+    ranger.color +
+    "  weapon of choice  " +
+    ranger.weapon;
   rangersList.appendChild(listItem);
 }

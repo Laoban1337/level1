@@ -33,9 +33,10 @@ while (!isDead) {
     }
   }
   if (gameStart === "2") {
-    console.log("You reach your hand into the hole in the wall \n " +
-    "You feel something on the otherside bite your hand, you recoil in pain. \n Looking down at your hand you see two puncture marks."
-    +"/n In real time your hand begins to swell as incredible pain over takes you,\n as your visions blurs , you lose conscienceness and die");
+    //Not using DRY will find a way to refactor code later.
+    console.log("You reach your hand into the hole in the wall \n ");
+    console.log("You feel something on the otherside bite your hand" +  "\n you recoil in pain. Looking down at your hand you see two puncture marks."+
+    "\n In real time your hand begins to swell as incredible pain over takes you as your visions blurs , you lose conscienceness and die");
     console.log("\n You have Died!!! \n GAME OVER!")
     isDead = true;
   }

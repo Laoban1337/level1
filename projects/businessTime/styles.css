@@ -1,82 +1,67 @@
-body{
-    background-color: black;
-    color: antiquewhite;
-}
-.page{
-    background: url(../businessTime/img/GWG.jpg);
-    grid-template-columns: repeat(24,1fr);
-    grid-template-rows: repeat(12,250px);
-    text-align: center;
-    font-style: italic;
-    color: blanchedalmond;
-}
-h1{
-    font-size: 6rem;
-    text-align: center;
-}
-h2{
-    font-size: 5rem;
-}
-h3{
-    font-size: 4rem;
-}
-.nav{
-    display: grid;
-    grid-template-columns: repeat(24,1);
-    grid-template-rows: repeat(12,25px);
-    position: relative;
-    font-size: 2rem;
- 
-}
-.navbar{
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-}
-.navbord{
-   
-    grid-column:1/14 ;
-    grid-row: 4;
-}
-.navImg{
-    object-fit: fill;
+body {
+  background-color: black;
+  color: antiquewhite;
 }
 
-.image{
-    height: auto;
-    width: auto;
+h1 {
+  font-size: 6rem;
+  text-align: center;
 }
-.img{
-    width: 95%;
-  
-   
+h2 {
+  font-size: 5rem;
 }
-.game{
-    width: 250px;
+h3 {
+  font-size: 4rem;
+}
+.menu ul {
+  grid-column: 3;
+  grid-row: 1;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+.menuBg {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: repeat(4, 25px);
+  position: fixed;
+  background-color: cadetblue;
+
+  /* background-color: green; */
+}
+.image {
+  width: 80%;
+}
+.lab {
+  grid-column: 1/2;
+  grid-row: 1;
+}
+.labyrinth {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.beast {
 }
 
-.image-container{
-    display: grid;
-    grid-template-columns: repeat(12, fr);
-    grid-template-rows: repeat(8,200px);
+.goblin {
 }
 
-.group{
-    background-color: transparent;
-    grid-column: 2;
-    grid-row: 1/3;
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 200px);
+}
+.footer-container {
+  height: 80px;
+  width: 100%;
 }
 
-.shoe{
-    background-color: transparent;
-    grid-column: 3/12;
-    grid-row: 1;
+.foot-img {
+  height: 100%;
+  width: auto;
 }
-
-.group2{
-    background-color: transparent;
-    grid-column: 11/12;
-    grid-row: 1;
+p {
+  text-align: center;
+  font-size: 1rem;
 }

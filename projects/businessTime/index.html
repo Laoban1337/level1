@@ -5,32 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Glass Walker Online</title>
-    <!-- Include your CSS files or styles here -->
   </head>
   <body>
     <header>
-        <div class="menuBg">
-            <nav class="menu">
-                <ul>
-                  <li ><a href="fakelink"> Games</a></li>
-                  <li><a href="fakelink"> Contact</a></li>
-                  <li><a href="fakelink"> About us</a></li>
-                  <li><a href="fakelink"> Jobs</a></li>
-                </ul>
-              </nav>
-        </div>
-    
-      <img class="img" src="/img/GWG.jpg" alt="" />
-      <h1>Games so good, you'd walk on glass to play them!</h1>
+      <nav class="menu">
+        <a href=""><img src="/img/GWalt.jpg" alt="Glass walker" class="logo" /></a>
+        <ul>
+          <li><a href="#games"> Games</a></li>
+          <li><a href="#"> Contact</a></li>
+          <li><a href="#"> About us</a></li>
+          <li><a href="#jobs"> Jobs</a></li>
+        </ul>
+      </nav>
+
+      <div class="main-image">
+        <img
+          class="img main-hero"
+          src="/img/GWG.jpg"
+          alt="Glass Walker Games Logo"
+          class="brand-logo"
+        />
+      </div>
+      <h1 class="title">Games so good, you'd walk on glass to play them!</h1>
     </header>
-    <hr>
+    <hr />
     <main>
       <!-- Your main content goes here -->
       <section id="games">
-        <h2>Games we've made!</h2>
-        <div class="img-container">
+        <div class="games text">
+          <h2 class="game-hero">Games we've made!</h2>
           <h3 class="lab">Into The labyrinth</h3>
-          <!-- <p class="labp">
+          <h3 class="beastH">Hunter Beast</h3>
+        </div>
+       
+
+        <div class="img-container">
+          <img
+            class="image labyrinth"
+            src="/img/Crypt diver.jpg"
+            alt="Two minotaurs facing off against a hero"
+          />
+
+          <img class="image beast" src="/img/Beasts.jpg" alt="Hunter Beast" />
+        </div>
+        <!-- text div for grid -->
+        <div class="text-box">
+          <p class="labp">
             "Into the Labyrinth" redefines traditional gaming, offering a
             mesmerizing blend of puzzle-solving and immersive storytelling.
             Navigating intricate mazes becomes a journey through stunning
@@ -39,14 +59,8 @@
             unveils secrets, and triumphs lead to unraveling the enigma within.
             Welcome to a labyrinth like no other, where the journey is as vital
             as the destination, crafted by a dedicated team.
-          </p> -->
-          <img
-            class="image labyrinth "
-            src="/img/Crypt diver.jpg"
-            alt="Two minotaurs facing off against a hero"
-          />
-          <h3 class="beastH">Hunter Beast</h3>
-          <!-- <p class="beastp">
+          </p>
+                <p class="beastp">
             Dive into the thrilling world of "Hunter Beast," a game that
             challenges the norm with its intense gameplay and immersive
             experience. As you embark on this adventure, the line between hunter
@@ -57,10 +71,23 @@
             every encounter is a test of skill and every triumph marks your
             prowess in the hunt. Welcome to a game crafted by a dedicated team,
             where the thrill of the chase is at the heart of the action.
-          </p> -->
-          <img class="image beast" src="/img/Beasts.jpg" alt="Hunter Beast" />
-          <h3 class="goblinH">When the Goblins attacked</h3>
-          <!-- <p class="goblinp">
+          </p>
+
+        </div>
+          
+      </section>
+      <hr />
+    </main>
+    <section id="newest">
+      <div class="image-container2">
+        <div class="goblin-p">
+          <h3 class="goblin-hero">When the goblins attacked</h3>
+          <img
+            class="image goblin"
+            src="/img/Goblin.jpg"
+            alt="When the goblins attacked"
+          />
+                     <p class="goblinp">
             "When the Goblins Attacked" unfolds an epic tale of a village
             besieged by goblins, where unity becomes the key to survival.
             Against overwhelming odds and outnumbered, the villagers find
@@ -71,43 +98,54 @@
             villagers in a narrative where courage, unity, and determination
             prevail against all odds, proving that together, we can overcome
             even the most formidable challenges.
-          </p> -->
-          <img
-            class="image goblin"
-            src="/img/Goblin.jpg"
-            alt="When the goblins attacked"
-          />
-          <h3 class="jumph">JumpMan: Block Heads</h3>
-          <!-- <p class="jump">
-            Get ready for an exhilarating platforming adventure with "JumpMan:
-            Block Heads," where the hero is a ball on a mission to conquer
-            square enemies. Bounce and leap through a vibrant world filled with
-            geometric challenges, showcasing the perfect fusion of precision and
-            agility. In this dynamic game, the simple joy of jumping takes
-            center stage, as you navigate through a maze of square adversaries.
-            "JumpMan: Block Heads" delivers a thrilling experience with each
-            leap, offering a unique twist to the classic platformer genre.
-            Embark on a journey where a bouncing ball becomes the ultimate hero,
-            facing off against square foes in a quest for precision and
-            high-flying fun.
-          </p> -->
-          <img class="image jumpman" src="/img/Jumpman.jpg" alt="" />
+          </p>
+
+
         </div>
-      </section>
-      <hr>
-    </main>
-        <section id="newest">
-           <div class="sidebar">
-            <h5>test </h5>
-           </div>
-        </section>
+       
+        <div class="jump-text">
+          <h3 class="jumph">JumpMan: Block Heads</h3>
+
+          <img class="image jumpman" src="/img/Jumpman.jpg" alt="" />
+              <p class="jump">
+      Get ready for an exhilarating platforming adventure with "JumpMan:
+      Block Heads," where the hero is a ball on a mission to conquer
+      square enemies. Bounce and leap through a vibrant world filled with
+      geometric challenges, showcasing the perfect fusion of precision and
+      agility. In this dynamic game, the simple joy of jumping takes
+      center stage, as you navigate through a maze of square adversaries.
+      "JumpMan: Block Heads" delivers a thrilling experience with each
+      leap, offering a unique twist to the classic platformer genre.
+      Embark on a journey where a bouncing ball becomes the ultimate hero,
+      facing off against square foes in a quest for precision and
+      high-flying fun.
+    </p>
+
+        </div>
+       
+      </div>
+    </section>
+    <section id="jobs">
+      <div class="jobs-box">
+        <ul>
+          <li> <a href="#">Lead Designer</a></li>
+          <li> <a href="#">Level Designer</a></li>
+          <li> <a href="#">UI Artist</a></li>
+          <li> <a href="#">Senior Software Engineer, Graphics</a></li>
+          <li> <a href="#">Senior Systems Designer</a></li>
+          <a href="#">UX Designer</a></li>
+          <a href="#">Senior Evenviroment Artist</a></li>
+        </ul>
+
+      </div>
+      
+    </section>
 
     <footer>
-        <div class="footer-container">
-            <img class="foot-img" src="/img/Gw1.jpg" alt="">
-            <hr>
-            <img class="img" src="/img/GWalt.jpg" alt="" />
-        </div>
+      <div class="footer-container">
+        <hr />
+        <img class="logofoot" src="/img/GWalt.jpg" alt="" />
+      </div>
       <!-- Your footer content goes here -->
     </footer>
 

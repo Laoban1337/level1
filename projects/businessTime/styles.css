@@ -3,65 +3,140 @@ body {
   color: antiquewhite;
 }
 
-h1 {
-  font-size: 6rem;
+nav{
+  background-color: #000000;
+  width: 100%;
+  height: 92px;
+  position: fixed;
+  border-bottom: 2px solid #FF004D;
+}
+nav ul {
+  float: right;
+  display: flex;
+  list-style: none;
+  
+}
+nav .logo{
+  width: 92px;
+}
+nav ul  li a{
+  color: antiquewhite;
+  line-height: 60px;
+  padding:12px 30px;
+  font-size: 22px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.main-image{
+  display: flex;
+  justify-content: center;
+}
+.main-hero{
+  width: 1600px;
+  height: 1000px;
+}
+h3{
   text-align: center;
 }
-h2 {
-  font-size: 5rem;
-}
-h3 {
-  font-size: 4rem;
-}
-.menu ul {
-  grid-column: 3;
-  grid-row: 1;
-  height: 120px;
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-}
-.menuBg {
-  display: grid;
-  grid-template-columns: repeat(24, 1fr);
-  grid-template-rows: repeat(4, 25px);
-  position: fixed;
-  background-color: cadetblue;
 
-  /* background-color: green; */
+.title{
+  text-align: center;
+  color:#FF004D
 }
-.image {
+.game-hero{
+  text-align: center;
+  font-size: 3rem;
+  color:#FDE5D4
+}
+.games{
+  text-align: center;
+}
+.text{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(4, 50px);
+}
+.game-hero{
+  display: none;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.lab{
+  font-size: 2rem;
+  grid-column: 2/5;
+  grid-row:2;
+  }
+  .beastH{
+    font-size: 2rem;
+    grid-column: 8/12;
+    grid-row: 2;
+  }
+  
+.img-container{
+ display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ .labyrinth {
+ margin-top: 50px;
+  width: 50%;
+  
+}
+
+
+.beast{
+  margin-top: 50px;
+  width: 48%;
+}
+.text-box{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-row: repeat(2);
+
+}
+
+.labp{
+grid-column:2/6 ;
+grid-row:1/2 ;
+font-size: 1rem;
+}
+.beastp{
+grid-column: 9/12;
+grid-row: 1/2;
+font-size: 1rem;
+}
+.img-container2{
+
+  display: flex;
   width: 80%;
 }
-.lab {
-  grid-column: 1/2;
-  grid-row: 1;
-}
-.labyrinth {
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-.beast {
+.footer-container{
+  display: flex;
+  justify-content: center;
+ 
 }
 
-.goblin {
-}
-
-.img-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(6, 200px);
-}
-.footer-container {
-  height: 80px;
-  width: 100%;
-}
-
-.foot-img {
-  height: 100%;
-  width: auto;
-}
-p {
+.goblin{
   text-align: center;
-  font-size: 1rem;
+  width: 1400px;
+  margin-left: 50px;
 }
+.goblin-hero{
+  font-size: 2rem;
+}
+ .jumpman{
+  display: flex;
+  text-align: center;
+  width: 1400px;
+  margin-left: 50px;
+ }
+
+ .logofoot{
+  text-align: center;
+  width: 1800px;
+  height: 300px;
+  margin-right: 50px;
+ }

@@ -33,13 +33,13 @@ let enemies = [
   },
   {
     name: "Red Cap Goblin",
-    attack: 20,
+    attack: 16,
     health: 115,
     item: ["Nothing" + "Potion", "Greater potion", "Goblin trinket"],
   },
   {
     name: "Goblin king " + " Boss",
-    attack: 25,
+    attack: 18,
     health: 200,
     item: [
       "Potion",
@@ -117,17 +117,19 @@ function combat(hero, enemy) {
       console.log(enemy.name + " Current health \n" + enemy.health);
 
       if (enemy.health <= 0) {
+        isFighting = false;
         enemyKill++;
         console.log(
           "You have slain  " +
             enemy.name +
             " and you have regained " +
             healthRegen +
-            "health"
+            "health" +""
         );
         hero.health += healthRegen;
         console.log(hero.name + " Current health " + hero.health);
         rewardPlayer();
+       
       }
 
       let enemyDamage = Math.floor(Math.random() * enemy.attack + 1);
@@ -165,8 +167,6 @@ function escapeCombat() {
     isWalking = true;
   } else {
     console.log("Enemy has blocked your path");
-    combat(hero, randomEnemy);
-    isFighting = true;
   }
 }
 //build item rewards

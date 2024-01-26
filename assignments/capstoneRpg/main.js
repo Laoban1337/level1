@@ -1,33 +1,40 @@
 const gameStart = require("readline-sync");
 
-gameStart.question("The labyrinth: Think you can survive?");
+gameStart.question(
+  "Step into the mysterious realm of Labyrinth, a survival challenge like no other.\n As you find yourself within its perplexing corridors, the reasons for your presence remain elusive.\n The air is thick with an eerie quiet, broken only by distant echoes and the unsettling rustle of unseen movements. \n Your sole objective: survive. \n The labyrinth is a merciless enigma, its twists and turns fraught with potential dangers. "
+);
 
-const heroName = gameStart.question("What is your name, Hero? :");
+const heroName = gameStart.question(
+  "Adventurous soul,amidst this labyrinth's mysterious confines, \n what name do you claim? Speak, and let your appellation resonate through the twisting corridors. Name thy self :"
+);
 
-console.log("Welcome great: " + heroName);
-
+console.log("Salutations great: " + heroName + "!");
+console.log(`
+${heroName}, gird thyself with valor, for within these cryptic corridors, unseen perils abound. Ready thy spirit, for the labyrinth demands resilience.`);
+//Booleans to control while loop flows
 isAlive = true;
 isFighting = false;
 isWalking = true;
+let enemyKill = 0;
 
 // Declare enemies
 let enemies = [
   {
     name: "Goblin",
     attack: 5,
-    health: 100,
+    health: 60,
     item: ["Lesser-Potion", "potion", "Useless junk", "Nothing"],
   },
   {
     name: "Hob-Goblin",
     attack: 15,
-    health: 125,
+    health: 85,
     item: ["Potion", "Potion+", "Useless junk", "nothing"],
   },
   {
     name: "Red Cap Goblin",
     attack: 20,
-    health: 125,
+    health: 115,
     item: ["Nothing" + "Potion", "Greater potion", "Goblin trinket"],
   },
   {
@@ -48,7 +55,6 @@ let hero = {
   name: heroName,
   health: 100,
   attack: 15,
-  armour: 10,
   items: ["potion"],
 };
 //Random enemy Gen
@@ -71,16 +77,20 @@ function enemySpawner() {
 //build walking function
 while (isWalking) {
   let walkingMenu = gameStart
-    .question("Press (w) to WALK or (e) to EXIT :")
+    .question("Press (w) to WALK (P) for Stats and inventory (e) to EXIT :")
     .toLowerCase();
 
   if (walkingMenu === "w") {
     console.log("You take a few steps forward");
     enemySpawner();
   } else if (walkingMenu === "e") {
-    console.log("You chose to leave the labyrinth\n Game Over");
+    console.log(`
+    ${hero.name}, as you depart, your echo fades from this labyrinth's digital embrace. 
+    \nUntil our paths entwine again, may your adventures elsewhere be equally resolute and beguiling.`);
     isAlive = false;
     break;
+  } else if (walkingMenu === "p") {
+    displayItemsAndStats(walkingMenu);
   } else {
     console.log("Invalid input");
   }
@@ -92,10 +102,10 @@ while (isWalking) {
 function combat(hero, enemy) {
   isWalking = false;
   isFighting = true;
-  let healthRegen = (hero.health += 20);
+  let healthRegen = 40;
   while (isFighting) {
     let combatMenu = gameStart
-      .question("Press (A) to attack Or (D) to attempt to escape :")
+      .question(" Press (A) to attack (D) attempt to escape : ")
       .toLowerCase();
 
     if (combatMenu === "a") {
@@ -107,6 +117,7 @@ function combat(hero, enemy) {
       console.log(enemy.name + " Current health \n" + enemy.health);
 
       if (enemy.health <= 0) {
+        enemyKill++;
         console.log(
           "You have slain  " +
             enemy.name +
@@ -130,7 +141,12 @@ function combat(hero, enemy) {
       if (hero.health <= 0) {
         isAlive = false;
         isFighting = false;
-        console.log("You have died! \n Game over!");
+        console.log(`
+        Alas, ${hero.name}, \n 
+         thy indomitable spirit, once ablaze with courage, hath succumbed to the inscrutable forces of the labyrinth.
+        As shadows envelop thee, know that thy journey ends here, a mere mortal ensnared by the enigma that pervades these cryptic corridors. 
+        May thy memory linger in the echoes of this arcane realm, and thy tale be whispered among those who dare tread the path of survival.
+        Knowest that thou hast slain ${enemyKill} enemies before falling victim to ${enemy.name}`);
       }
     } else if (combatMenu === "d") {
       escapeCombat();
@@ -149,13 +165,14 @@ function escapeCombat() {
     isWalking = true;
   } else {
     console.log("Enemy has blocked your path");
+    combat(hero, randomEnemy);
     isFighting = true;
   }
 }
 //build item rewards
 
 function rewardPlayer() {
-    let randomEnemy = getRandomEnemy();
+  let randomEnemy = getRandomEnemy();
   //set index of items in array of items
   let randomItemIndex = Math.floor(Math.random() * randomEnemy.item.length);
   // item at a specific index chosen randomly
@@ -164,5 +181,42 @@ function rewardPlayer() {
   hero.items.push[randomItem];
   //display item
   console.log(` \n You have been awarded ${randomItem}`);
+  isFighting = false;
+  isWalking = true;
 }
 // Handle displaying inventory and hero health and stats
+//build inventory to allow use of rewarded items
+//Will not display stats in combat or if a monster is encountered
+function displayItemsAndStats(menu) {
+  isWalking = true;
+
+  if (menu === "p") {
+    console.log(
+      hero.name +
+        "s" +
+        " Stats: " +
+        " Health: " +
+        hero.health +
+        "" +
+        " Attack: " +
+        hero.attack +
+        "" +
+        " Items: " +
+        hero.items
+    );
+  } else if (menu === "print") {
+    console.log(
+      hero.name +
+        "s" +
+        " Stats " +
+        "Health: " +
+        hero.health +
+        "Attack: " +
+        hero.attack +
+        " Items: " +
+        hero.items
+    );
+  } else {
+    console.log(" Please enter a valid input.");
+  }
+}

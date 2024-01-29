@@ -3,140 +3,184 @@ body {
   color: antiquewhite;
 }
 
-nav{
+nav {
   background-color: #000000;
   width: 100%;
   height: 92px;
   position: fixed;
-  border-bottom: 2px solid #FF004D;
+  border-bottom: 2px solid #ff004d;
 }
+nav {
+  z-index: 1000;
+}
+
 nav ul {
   float: right;
   display: flex;
   list-style: none;
-  
 }
-nav .logo{
+nav .logo {
   width: 92px;
 }
-nav ul  li a{
+nav ul li a {
   color: antiquewhite;
   line-height: 60px;
-  padding:12px 30px;
+  padding: 12px 30px;
   font-size: 22px;
   text-decoration: none;
   border-radius: 6px;
   margin-right: 10px;
 }
 
-.main-image{
+.main-image {
   display: flex;
   justify-content: center;
 }
-.main-hero{
+.main-hero {
   width: 1600px;
   height: 1000px;
 }
-h3{
+h3 {
   text-align: center;
+}
+h4{
+  padding-top: 1%;
+}
+.job-h2{
+  padding-top:10%
 }
 
-.title{
+.title {
   text-align: center;
-  color:#FF004D
+  color: #ff004d;
 }
-.game-hero{
+.game-hero {
   text-align: center;
   font-size: 3rem;
-  color:#FDE5D4
+  color: #fde5d4;
 }
-.games{
+.games {
   text-align: center;
 }
-.text{
+.text {
   display: grid;
-  grid-template-columns: repeat(12,1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(4, 50px);
 }
-.game-hero{
+.game-hero {
   display: none;
   grid-column: 1/2;
   grid-row: 1/2;
 }
-.lab{
+.lab {
   font-size: 2rem;
   grid-column: 2/5;
-  grid-row:2;
-  }
-  .beastH{
-    font-size: 2rem;
-    grid-column: 8/12;
-    grid-row: 2;
-  }
-  
-.img-container{
- display: flex;
+  grid-row: 4;
+}
+.beastH {
+  font-size: 2rem;
+  grid-column: 8/12;
+  grid-row: 4;
+}
+
+.img-container {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
- .labyrinth {
- margin-top: 50px;
-  width: 50%;
-  
-}
-
-
-.beast{
+.labyrinth {
   margin-top: 50px;
   width: 48%;
 }
-.text-box{
+
+.beast {
+  height: 80%;
+  margin-top: 50px;
+  width: 45%;
+}
+.text-box {
   display: grid;
-  grid-template-columns: repeat(12,1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-row: repeat(2);
-
 }
 
-.labp{
-grid-column:2/6 ;
-grid-row:1/2 ;
-font-size: 1rem;
+.labp {
+  grid-column: 2/6;
+  grid-row: 1/2;
+  font-size: 1rem;
 }
-.beastp{
-grid-column: 9/12;
-grid-row: 1/2;
-font-size: 1rem;
+.beastp {
+  grid-column: 9/12;
+  grid-row: 1/2;
+  font-size: 1rem;
 }
-.img-container2{
-
-  display: flex;
-  width: 80%;
+.img-container2 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 100px);
 }
-.footer-container{
+.footer-container {
   display: flex;
   justify-content: center;
- 
 }
 
-.goblin{
-  text-align: center;
-  width: 1400px;
-  margin-left: 50px;
+.goblin {
+  grid-column: 3/13;
+  grid-row: 2;
+  width: 50%;
+  margin-left: 450px;
 }
-.goblin-hero{
+.goblin-hero {
   font-size: 2rem;
 }
- .jumpman{
-  display: flex;
+.jumpman {
   text-align: center;
-  width: 1400px;
-  margin-left: 50px;
- }
+  width: 60%;
+  margin-left: 350px;
+}
 
- .logofoot{
+.jobs-box {
+  text-align: center;
+  display: block;
+  max-width: 1440px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: black;
+}
+.job-listing {
+  border-top: 1px solid #f23d4c;
+  display: block;
+  padding: 40px 0;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.job-listing-container h4 {
+  
+  color: #f23d4c;
+  display: block;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: #f8e559;
+}
+.row>div:hover{
+  color: #f8e559;
+}
+a {
+  background-color: transparent;
+}
+span {
+  color: #f8e559;
+}
+
+
+.logofoot {
   text-align: center;
   width: 1800px;
   height: 300px;
   margin-right: 50px;
- }
+}

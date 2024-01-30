@@ -12,7 +12,7 @@ console.log("Salutations great: " + heroName + "!");
 console.log(`
 ${heroName}, gird thyself with valor, for within these cryptic corridors, unseen perils abound. Ready thy spirit, for the labyrinth demands resilience.`);
 //Booleans to control while loop flows
-let letisAlive = true; 
+let letisAlive = true;
 let isFighting = false;
 let isWalking = true;
 let isShopping = false;
@@ -263,6 +263,9 @@ function useItem(arrayOfItems) {
         arrayOfItems.pop();
         console.log("You have used a potion!");
         hero.health += 40;
+        if (hero.health >= 100) {
+          hero.health = 100;
+        }
         isWalking = true;
       }
     }

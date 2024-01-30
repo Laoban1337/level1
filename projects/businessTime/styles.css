@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
 body {
   background-color: black;
   color: antiquewhite;
@@ -43,11 +48,11 @@ nav ul li a {
 h3 {
   text-align: center;
 }
-h4{
+h4 {
   padding-top: 1%;
 }
-.job-h2{
-  padding-top:10%
+.job-h2 {
+  padding-top: 10%;
 }
 
 .title {
@@ -129,15 +134,25 @@ h4{
   grid-column: 3/13;
   grid-row: 2;
   width: 50%;
-  margin-left: 450px;
+  margin-left: 475px;
+}
+.goblinp{
+  font-size: 1.5rem;
 }
 .goblin-hero {
+  color:gold;
   font-size: 2rem;
 }
 .jumpman {
   text-align: center;
   width: 60%;
   margin-left: 350px;
+}
+.jumph{
+  padding-top: 5%;
+}
+.jump{
+font-size: 1.5rem;
 }
 
 .jobs-box {
@@ -156,7 +171,6 @@ h4{
   transition: background 0.3s ease;
 }
 .job-listing-container h4 {
-  
   color: #f23d4c;
   display: block;
   font-weight: 900;
@@ -167,7 +181,7 @@ h4{
 a:hover {
   color: #f8e559;
 }
-.row>div:hover{
+.row > div:hover {
   color: #f8e559;
 }
 a {
@@ -176,7 +190,6 @@ a {
 span {
   color: #f8e559;
 }
-
 
 .logofoot {
   text-align: center;

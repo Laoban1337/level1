@@ -10,7 +10,7 @@
 
 /* Apply background image to the entire body */
 body {
-  background-image: url('../businessTime/img/oldone.jpg'); /* Specify the path to your image */
+  background-image: url('./img/oldone.jpg'); /* Specify the path to your image */
   background-size: cover; /* Ensures the image covers the entire background */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-position: center center; /* Centers the image */
@@ -247,9 +247,9 @@ p {
   text-align: center;
 }
 
-.glassFooter{
+/* .glassFooter{
 
-}
+} */
 /* General Paragraph Formatting */
 p {
   font-family: Arial, sans-serif; /* Sets the font family */
